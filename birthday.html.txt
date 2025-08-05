@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 5th Birthday Dhruv!</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-top: 40px;
+            animation: pop 1s ease;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        p {
+            font-size: 1.4em;
+            margin: 10px 20px;
+        }
+
+        .balloons {
+            position: relative;
+            margin-top: 50px;
+            height: 250px;
+        }
+
+        .balloon {
+            width: 80px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .balloon:nth-child(2) { 
+            left: 30%;
+            background: blue;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(3) { 
+            left: 60%;
+            background: yellow;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(4) { 
+            left: 85%;
+            background: green;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-150px); }
+            100% { transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        button {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #e91e63;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy 5th Birthday Dhruv! 🎂</h1>
+    <h2>Wishing you endless fun, laughter, and joy! 🎁</h2>
+
+    <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/boy-2026066_1280.png" alt="Dhruv's Image">
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <p>Dear Dhruv, may your 5th birthday be filled with magical moments and happiness! 🌈</p>
+
+    <button onclick="playMusic()">Play Birthday Song 🎶</button>
+    <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+    <div class="footer">
+        <p>Made with ❤️ just for Dhruv!</p>
+    </div>
+
+    <script>
+        function playMusic() {
+            document.getElementById('birthdaySong').play();
+        }
+    </script>
+</body>
+</html>
